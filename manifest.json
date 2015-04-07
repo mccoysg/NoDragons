@@ -1,0 +1,29 @@
+{
+  "name": "No Dragons",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension helps keep meetings concise and in line with objectives.",
+  "homepage_url": "http://twitter.com/mccoysg",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    " https://ajax.googleapis.com/",
+    " https://www.googleapis.com/auth/drive"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
